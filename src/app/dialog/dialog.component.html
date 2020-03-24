@@ -1,0 +1,66 @@
+<mat-tab-group mat-align-tabs="center">
+  <mat-tab label="Upload file">
+    <div class="dialogBox">
+      <input
+        type="file"
+        #fileInput
+        style="display: none"
+        (change)="onFileSelected($event)"
+      />
+      <img
+        class="img-responsive center upload-icon"
+        src="../../assets/upload.png"
+        width="80px"
+        alt="upload-icon"
+        (click)="fileInput.click()"
+      />
+      <div class="dialogFooter1">
+        <mat-divider></mat-divider>
+        <mat-dialog-actions>
+          <div class="example-button-row">
+            <a mat-raised-button routerLink=".">Login</a>
+            <button
+              mat-raised-button
+              color="primary"
+              (click)="apiCallFile()"
+              [mat-dialog-close]="true"
+            >
+              Submit
+            </button>
+          </div>
+        </mat-dialog-actions>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="Copy Paste">
+    <div class="dialogBox">
+      <form #uploadfile="ngForm">
+        <br />
+        <textarea
+          class="form-control"
+          rows="8"
+          id="comment"
+          name="ttarea"
+          [(ngModel)]="uploadModel"
+        ></textarea>
+        <div class="dialogFooter2">
+          <mat-divider></mat-divider>
+          <mat-dialog-actions>
+            <div class="example-button-row">
+              <a mat-raised-button routerLink=".">Login</a>
+              <button
+                mat-raised-button
+                color="primary"
+                (click)="apiCallData()"
+                [mat-dialog-close]="uploadModel"
+                cdkFocusInitial
+              >
+                Submit
+              </button>
+            </div>
+          </mat-dialog-actions>
+        </div>
+      </form>
+    </div>
+  </mat-tab>
+</mat-tab-group>
