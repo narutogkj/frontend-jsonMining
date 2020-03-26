@@ -1,0 +1,22 @@
+<div class="waraper">
+  <div class="row">
+    <div class="col-sm-4">
+      <app-rawjson></app-rawjson>
+    </div>
+    <div class="col-sm-8">
+      <div>
+        <div style="display: block">
+          <canvas
+            baseChart
+            [datasets]="lineChartData"
+            [labels]="lineChartLabels"
+            [chartType]="lineChartType"
+          >
+          </canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- [options]="radarChartOptions" -->

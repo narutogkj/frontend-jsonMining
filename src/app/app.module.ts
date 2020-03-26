@@ -20,8 +20,9 @@ import { GraphuiComponent } from "./graphui/graphui.component";
 import { TableuiComponent } from "./tableui/tableui.component";
 import { RawjsonComponent } from "./rawjson/rawjson.component";
 import { ChartsModule } from "ng2-charts";
-import { RadaruiComponent } from './radarui/radarui.component';
-import { BaruiComponent } from './barui/barui.component';
+import { RadaruiComponent } from "./radarui/radarui.component";
+import { BaruiComponent } from "./barui/barui.component";
+import { LineuiComponent } from './lineui/lineui.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { BaruiComponent } from './barui/barui.component';
     TableuiComponent,
     RawjsonComponent,
     RadaruiComponent,
-    BaruiComponent
+    BaruiComponent,
+    LineuiComponent
   ],
   entryComponents: [DialogComponent],
   imports: [
