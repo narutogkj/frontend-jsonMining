@@ -3,3 +3,10 @@
   -moz-box-shadow: inset 0px 0px 10px 0px rgba(128, 128, 128, 1);
   box-shadow: inset 0px 0px 10px 0px rgba(128, 128, 128, 1);
 }
+.card-header {
+  height: 50px;
+}
+
+#accordion {
+  margin-bottom: 10px;
+}

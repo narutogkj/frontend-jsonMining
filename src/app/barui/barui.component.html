@@ -1,0 +1,24 @@
+<div class="waraper">
+  <div class="row">
+    <div class="col-sm-4">
+      <app-rawjson></app-rawjson>
+    </div>
+    <div class="col-sm-8">
+      <div>
+        <div style="display: block">
+          <canvas
+            baseChart
+            [datasets]="radarChartData"
+            [labels]="radarChartLabels"
+            [chartType]="radarChartType"
+            [plugins]="barChartPlugins"
+            [legend]="barChartLegend"
+          >
+          </canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- [options]="radarChartOptions" -->

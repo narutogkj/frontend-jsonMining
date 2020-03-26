@@ -18,7 +18,10 @@ import { HomeComponent } from "./home/home.component";
 import { InputvalueService } from "./services/inputvalue.service";
 import { GraphuiComponent } from "./graphui/graphui.component";
 import { TableuiComponent } from "./tableui/tableui.component";
-import { RawjsonComponent } from './rawjson/rawjson.component';
+import { RawjsonComponent } from "./rawjson/rawjson.component";
+import { ChartsModule } from "ng2-charts";
+import { RadaruiComponent } from './radarui/radarui.component';
+import { BaruiComponent } from './barui/barui.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,9 @@ import { RawjsonComponent } from './rawjson/rawjson.component';
     HomeComponent,
     GraphuiComponent,
     TableuiComponent,
-    RawjsonComponent
+    RawjsonComponent,
+    RadaruiComponent,
+    BaruiComponent
   ],
   entryComponents: [DialogComponent],
   imports: [
@@ -39,7 +44,8 @@ import { RawjsonComponent } from './rawjson/rawjson.component';
     MatButtonModule,
     MatDividerModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ChartsModule
   ],
   providers: [apicallService, InputvalueService],
   bootstrap: [AppComponent]
