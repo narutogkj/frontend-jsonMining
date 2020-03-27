@@ -15,8 +15,8 @@ const routes: Routes = [
   { path: "radar", component: RadaruiComponent },
   { path: "bar", component: BaruiComponent },
   { path: "line", component: LineuiComponent },
-  { path: "doughnutui", component: DoughnutuiComponent },
-  { path: "pieui", component: PieuiComponent }
+  { path: "doughnut", component: DoughnutuiComponent },
+  { path: "pie", component: PieuiComponent }
 ];
 
 @NgModule({

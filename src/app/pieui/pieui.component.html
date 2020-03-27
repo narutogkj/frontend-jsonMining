@@ -5,13 +5,17 @@
     </div>
     <div class="col-sm-8">
       <div class="card">
-        <h3>Radar Chart</h3>
+        <h3>Pie Chart</h3>
         <div style="display: block">
           <canvas
             baseChart
-            [datasets]="radarChartData"
-            [labels]="radarChartLabels"
-            [chartType]="radarChartType"
+            [data]="pieChartData"
+            [labels]="pieChartLabels"
+            [chartType]="pieChartType"
+            [options]="pieChartOptions"
+            [plugins]="pieChartPlugins"
+            [colors]="pieChartColors"
+            [legend]="pieChartLegend"
           >
           </canvas>
         </div>

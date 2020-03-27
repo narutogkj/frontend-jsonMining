@@ -4,9 +4,26 @@ import { Injectable } from "@angular/core";
   providedIn: "root"
 })
 export class InputvalueService {
-  private value: any = {
-    default: true
-  };
+  private value: any = [
+    {
+      Eating: "65",
+      Drinking: "59",
+      Sleeping: "90",
+      Designing: "81",
+      Coding: "56",
+      Cycling: "55",
+      Running: "40"
+    },
+    {
+      Eating: "28",
+      Drinking: "48",
+      Sleeping: "40",
+      Designing: "19",
+      Coding: "96",
+      Cycling: "27",
+      Running: "100"
+    }
+  ];
   constructor() {}
   public setValue(v: any) {
     this.value = v;

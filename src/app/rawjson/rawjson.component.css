@@ -10,3 +10,8 @@
 #accordion {
   margin-bottom: 10px;
 }
+
+.card-body {
+  height: 78vh;
+  overflow-y: scroll;
+}

@@ -25,6 +25,7 @@ import { BaruiComponent } from "./barui/barui.component";
 import { LineuiComponent } from './lineui/lineui.component';
 import { DoughnutuiComponent } from './doughnutui/doughnutui.component';
 import { PieuiComponent } from './pieui/pieui.component';
+import { HeaderComponent } from './header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import { PieuiComponent } from './pieui/pieui.component';
     BaruiComponent,
     LineuiComponent,
     DoughnutuiComponent,
-    PieuiComponent
+    PieuiComponent,
+    HeaderComponent
   ],
   entryComponents: [DialogComponent],
   imports: [

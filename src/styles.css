@@ -6,5 +6,12 @@ body {
 }
 body {
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.waraper {
+  margin-top: 20px;
+  margin-left: 10px;
 }
