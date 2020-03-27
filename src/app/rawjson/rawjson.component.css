@@ -9,4 +9,10 @@
 
 #accordion {
   margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.raw-json-card-body {
+  height: 75vh;
+  overflow-y: scroll;
 }
