@@ -12,12 +12,7 @@
   margin-left: 10px;
 }
 
-.raw-json-card-body {
-  height: 75vh;
-  overflow-y: scroll;
-}
-
 .card-body {
-  height: 78vh;
-  overflow-y: scroll;
+  height: 77vh;
+  overflow-y: auto;
 }

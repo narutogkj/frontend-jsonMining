@@ -28,6 +28,7 @@ import { LineuiComponent } from "./lineui/lineui.component";
 import { DoughnutuiComponent } from "./doughnutui/doughnutui.component";
 import { TreeuiComponent } from "./treeui/treeui.component";
 import { HeaderComponent } from "./header/header.component";
+import { PieuiComponent } from "./pieui/pieui.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { HeaderComponent } from "./header/header.component";
     LineuiComponent,
     DoughnutuiComponent,
     TreeuiComponent,
-    HeaderComponent
+    HeaderComponent,
+    PieuiComponent
   ],
   entryComponents: [DialogComponent],
   imports: [
