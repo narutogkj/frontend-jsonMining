@@ -7,6 +7,7 @@ import { RadaruiComponent } from "./radarui/radarui.component";
 import { BaruiComponent } from "./barui/barui.component";
 import { LineuiComponent } from "./lineui/lineui.component";
 import { DoughnutuiComponent } from "./doughnutui/doughnutui.component";
+import { PieuiComponent } from "./pieui/pieui.component";
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "table", component: TableuiComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: "radar", component: RadaruiComponent },
   { path: "bar", component: BaruiComponent },
   { path: "line", component: LineuiComponent },
-  { path: "doughnutui", component: DoughnutuiComponent }
+  { path: "doughnutui", component: DoughnutuiComponent },
+  { path: "pieui", component: PieuiComponent }
 ];
 
 @NgModule({

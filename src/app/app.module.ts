@@ -24,6 +24,7 @@ import { RadaruiComponent } from "./radarui/radarui.component";
 import { BaruiComponent } from "./barui/barui.component";
 import { LineuiComponent } from './lineui/lineui.component';
 import { DoughnutuiComponent } from './doughnutui/doughnutui.component';
+import { PieuiComponent } from './pieui/pieui.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ import { DoughnutuiComponent } from './doughnutui/doughnutui.component';
     RadaruiComponent,
     BaruiComponent,
     LineuiComponent,
-    DoughnutuiComponent
+    DoughnutuiComponent,
+    PieuiComponent
   ],
   entryComponents: [DialogComponent],
   imports: [
