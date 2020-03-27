@@ -6,13 +6,15 @@ import { TableuiComponent } from "./tableui/tableui.component";
 import { RadaruiComponent } from "./radarui/radarui.component";
 import { BaruiComponent } from "./barui/barui.component";
 import { LineuiComponent } from "./lineui/lineui.component";
+import { DoughnutuiComponent } from "./doughnutui/doughnutui.component";
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "table", component: TableuiComponent },
   { path: "graph", component: GraphuiComponent },
   { path: "radar", component: RadaruiComponent },
   { path: "bar", component: BaruiComponent },
-  { path: "line", component: LineuiComponent }
+  { path: "line", component: LineuiComponent },
+  { path: "doughnutui", component: DoughnutuiComponent }
 ];
 
 @NgModule({

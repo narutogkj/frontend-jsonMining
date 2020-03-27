@@ -23,6 +23,7 @@ import { ChartsModule } from "ng2-charts";
 import { RadaruiComponent } from "./radarui/radarui.component";
 import { BaruiComponent } from "./barui/barui.component";
 import { LineuiComponent } from './lineui/lineui.component';
+import { DoughnutuiComponent } from './doughnutui/doughnutui.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import { LineuiComponent } from './lineui/lineui.component';
     RawjsonComponent,
     RadaruiComponent,
     BaruiComponent,
-    LineuiComponent
+    LineuiComponent,
+    DoughnutuiComponent
   ],
   entryComponents: [DialogComponent],
   imports: [
