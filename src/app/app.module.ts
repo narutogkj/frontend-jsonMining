@@ -4,6 +4,8 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { NgxJsonViewerModule } from "ngx-json-viewer";
+
 import {
   MatSliderModule,
   MatDialogModule,
@@ -22,10 +24,10 @@ import { RawjsonComponent } from "./rawjson/rawjson.component";
 import { ChartsModule } from "ng2-charts";
 import { RadaruiComponent } from "./radarui/radarui.component";
 import { BaruiComponent } from "./barui/barui.component";
-import { LineuiComponent } from './lineui/lineui.component';
-import { DoughnutuiComponent } from './doughnutui/doughnutui.component';
-import { PieuiComponent } from './pieui/pieui.component';
-import { HeaderComponent } from './header/header.component';
+import { LineuiComponent } from "./lineui/lineui.component";
+import { DoughnutuiComponent } from "./doughnutui/doughnutui.component";
+import { TreeuiComponent } from "./treeui/treeui.component";
+import { HeaderComponent } from "./header/header.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +40,7 @@ import { HeaderComponent } from './header/header.component';
     BaruiComponent,
     LineuiComponent,
     DoughnutuiComponent,
-    PieuiComponent,
+    TreeuiComponent,
     HeaderComponent
   ],
   entryComponents: [DialogComponent],
@@ -53,7 +55,8 @@ import { HeaderComponent } from './header/header.component';
     MatDividerModule,
     HttpClientModule,
     FormsModule,
-    ChartsModule
+    ChartsModule,
+    NgxJsonViewerModule
   ],
   providers: [apicallService, InputvalueService],
   bootstrap: [AppComponent]
