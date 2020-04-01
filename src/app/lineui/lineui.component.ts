@@ -3,6 +3,8 @@ import { Component, OnInit } from "@angular/core";
 import { ChartDataSets, ChartType, ChartOptions } from "chart.js";
 import { Color, BaseChartDirective, Label } from "ng2-charts";
 import { InputvalueService } from "../services/inputvalue.service";
+import { BootomSheetComponent } from "../bootom-sheet/bootom-sheet.component";
+import { MatBottomSheet } from "@angular/material";
 @Component({
   selector: "app-lineui",
   templateUrl: "./lineui.component.html",
@@ -19,10 +21,16 @@ export class LineuiComponent implements OnInit {
   public lineChartData: ChartDataSets[] = [];
   public lineChartType: ChartType = "line";
 
-  constructor(private _inputvalue: InputvalueService) {
+  constructor(
+    private _inputvalue: InputvalueService,
+    private _bottomSheet: MatBottomSheet
+  ) {
     if (this._inputvalue.getValue()) {
       this.value = this._inputvalue.getValue();
     }
+  }
+  openBottomSheet(): void {
+    this._bottomSheet.open(BootomSheetComponent);
   }
 
   ngOnInit() {

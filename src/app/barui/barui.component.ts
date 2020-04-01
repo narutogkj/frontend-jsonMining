@@ -4,6 +4,8 @@ import { ChartDataSets, ChartType, RadialChartOptions } from "chart.js";
 import { Label } from "ng2-charts";
 import { InputvalueService } from "../services/inputvalue.service";
 import * as pluginDataLabels from "chart.js";
+import { MatBottomSheet } from "@angular/material";
+import { BootomSheetComponent } from "../bootom-sheet/bootom-sheet.component";
 @Component({
   selector: "app-barui",
   templateUrl: "./barui.component.html",
@@ -22,10 +24,16 @@ export class BaruiComponent implements OnInit {
   public barChartLegend = true;
   public barChartPlugins = [pluginDataLabels];
 
-  constructor(private _inputvalue: InputvalueService) {
+  constructor(
+    private _inputvalue: InputvalueService,
+    private _bottomSheet: MatBottomSheet
+  ) {
     if (this._inputvalue.getValue()) {
       this.value = this._inputvalue.getValue();
     }
+  }
+  openBottomSheet(): void {
+    this._bottomSheet.open(BootomSheetComponent);
   }
 
   ngOnInit() {

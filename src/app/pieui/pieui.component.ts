@@ -3,6 +3,8 @@ import { ChartType, ChartOptions } from "chart.js";
 import { Label } from "ng2-charts";
 import * as pluginDataLabels from "chart.js";
 import { InputvalueService } from "../services/inputvalue.service";
+import { BootomSheetComponent } from "../bootom-sheet/bootom-sheet.component";
+import { MatBottomSheet } from "@angular/material";
 @Component({
   selector: "app-pieui",
   templateUrl: "./pieui.component.html",
@@ -32,12 +34,17 @@ export class PieuiComponent implements OnInit {
   public pieChartLegend = true;
   public pieChartPlugins = [pluginDataLabels];
 
-  constructor(private _inputvalue: InputvalueService) {
+  constructor(
+    private _inputvalue: InputvalueService,
+    private _bottomSheet: MatBottomSheet
+  ) {
     if (this._inputvalue.getValue()) {
       this.value = this._inputvalue.getValue();
     }
   }
-
+  openBottomSheet(): void {
+    this._bottomSheet.open(BootomSheetComponent);
+  }
   ngOnInit() {
     this.jsondata = this._inputvalue.getData(this.value);
 

@@ -11,7 +11,8 @@ import {
   MatDialogModule,
   MatTabsModule,
   MatButtonModule,
-  MatDividerModule
+  MatDividerModule,
+  MatBottomSheetModule
 } from "@angular/material";
 import { DialogComponent } from "./dialog/dialog.component";
 import { apicallService } from "./services/apicall.service";
@@ -29,6 +30,7 @@ import { DoughnutuiComponent } from "./doughnutui/doughnutui.component";
 import { TreeuiComponent } from "./treeui/treeui.component";
 import { HeaderComponent } from "./header/header.component";
 import { PieuiComponent } from "./pieui/pieui.component";
+import { BootomSheetComponent } from "./bootom-sheet/bootom-sheet.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,9 +45,10 @@ import { PieuiComponent } from "./pieui/pieui.component";
     DoughnutuiComponent,
     TreeuiComponent,
     HeaderComponent,
-    PieuiComponent
+    PieuiComponent,
+    BootomSheetComponent
   ],
-  entryComponents: [DialogComponent],
+  entryComponents: [DialogComponent, BootomSheetComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -58,6 +61,7 @@ import { PieuiComponent } from "./pieui/pieui.component";
     HttpClientModule,
     FormsModule,
     ChartsModule,
+    MatBottomSheetModule,
     NgxJsonViewerModule
   ],
   providers: [apicallService, InputvalueService],

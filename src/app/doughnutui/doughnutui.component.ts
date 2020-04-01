@@ -2,6 +2,8 @@ import { Component, OnInit } from "@angular/core";
 import { ChartType } from "chart.js";
 import { MultiDataSet, Label } from "ng2-charts";
 import { InputvalueService } from "../services/inputvalue.service";
+import { BootomSheetComponent } from "../bootom-sheet/bootom-sheet.component";
+import { MatBottomSheet } from "@angular/material";
 
 @Component({
   selector: "app-doughnutui",
@@ -17,12 +19,18 @@ export class DoughnutuiComponent implements OnInit {
   public doughnutChartData: MultiDataSet = [];
   public doughnutChartType: ChartType = "doughnut";
 
-  constructor(private _inputvalue: InputvalueService) {
+  constructor(
+    private _inputvalue: InputvalueService,
+    private _bottomSheet: MatBottomSheet
+  ) {
     if (this._inputvalue.getValue()) {
       this.value = this._inputvalue.getValue();
     }
   }
 
+  openBottomSheet(): void {
+    this._bottomSheet.open(BootomSheetComponent);
+  }
   ngOnInit() {
     this.jsondata = this._inputvalue.getData(this.value);
 
