@@ -1,13 +1,20 @@
 <div class="waraper">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       <app-rawjson></app-rawjson>
     </div>
-    <div class="col-sm-8">
-      <div class="card chart-card">
-        <h3 class="chart-heading">Tree Chart:</h3>
+    <div class="col-sm-7">
+      <div class="chart-card">
+        <h3 class="chart-heading">Tree Structure:</h3>
+        <hr />
         <ngx-json-viewer [json]="value" [expanded]="false"></ngx-json-viewer>
       </div>
+      <div class="tips-box card">
+        <p>tips</p>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <app-rawjson></app-rawjson>
     </div>
   </div>
   <button

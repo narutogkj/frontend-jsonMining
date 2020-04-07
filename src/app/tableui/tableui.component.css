@@ -2,6 +2,16 @@
   margin-top: -5px;
   margin-left: 10px;
 }
+.tips-box {
+  margin-left: -30px;
+  margin-top: -65px;
+  width: 108%;
+  height: 100px;
+}
+.chart-card {
+  height: 85vh;
+  margin-right: 10px;
+}
 
 .chart-heading {
   margin-top: 10px;

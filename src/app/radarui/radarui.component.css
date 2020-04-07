@@ -11,7 +11,12 @@
 .waraper {
   margin-top: -5px;
 }
-
+.tips-box {
+  margin-left: -30px;
+  margin-top: -65px;
+  width: 108%;
+  height: 100px;
+}
 @media only screen and (min-width: 600px) {
   .bottom-sheet-json {
     display: none;
