@@ -31,6 +31,7 @@ import { TreeuiComponent } from "./treeui/treeui.component";
 import { HeaderComponent } from "./header/header.component";
 import { PieuiComponent } from "./pieui/pieui.component";
 import { BootomSheetComponent } from "./bootom-sheet/bootom-sheet.component";
+import { StatisticsuiComponent } from './statisticsui/statisticsui.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +47,8 @@ import { BootomSheetComponent } from "./bootom-sheet/bootom-sheet.component";
     TreeuiComponent,
     HeaderComponent,
     PieuiComponent,
-    BootomSheetComponent
+    BootomSheetComponent,
+    StatisticsuiComponent
   ],
   entryComponents: [DialogComponent, BootomSheetComponent],
   imports: [

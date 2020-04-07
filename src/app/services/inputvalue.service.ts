@@ -1,29 +1,21 @@
 import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: "root"
+  providedIn: "root",
 })
 export class InputvalueService {
-  private value: any = [
-    {
-      Eating: "65",
-      Drinking: "59",
-      Sleeping: "90",
-      Designing: "81",
-      Coding: "56",
-      Cycling: "55",
-      Running: "40"
-    },
-    {
-      Eating: "28",
-      Drinking: "48",
-      Sleeping: "40",
-      Designing: "19",
-      Coding: "96",
-      Cycling: "27",
-      Running: "100"
-    }
-  ];
+  private value: any = {
+    Eating: "65",
+    Drinking: "59",
+    Sleeping: "90",
+    Designing: "81",
+    Coding: "56",
+    Cycling: "55",
+    Running: "40",
+  };
+  //["65", "59", "90", "81", "56", "55", "40"];
+  //this type of values not work properly with statistics
+
   constructor() {}
   public setValue(v: any) {
     this.value = v;

@@ -1,0 +1,119 @@
+<div class="waraper">
+  <div class="row">
+    <div class="col-sm-4 rawjson">
+      <app-rawjson></app-rawjson>
+    </div>
+    <div class="col-sm-8">
+      <div class="card chart-card">
+        <h3 class="chart-heading">Statistics:</h3>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="colum">
+                <span class="st-label"
+                  >MEAN
+                  <h4 class="float-right st-value">{{ Mean }}</h4>
+                </span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="colum">
+                <span class="st-label"
+                  >Mode
+                  <h4 class="float-right st-value">{{ Mode }}</h4>
+                </span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="colum">
+                <span class="st-label"
+                  >Median
+                  <h4 class="float-right st-value">{{ Median }}</h4>
+                </span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="colum">
+                <span class="st-label"
+                  >Variance
+                  <h4 class="float-right st-value">{{ Variance }}</h4>
+                </span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="colum">
+                <span class="st-label"
+                  >Standard Deviation
+                  <h4 class="float-right st-value">{{ StandardDeviation }}</h4>
+                </span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="colum">
+                <span class="st-label"
+                  >Min
+                  <h4 class="float-right st-value">{{ Min }}</h4>
+                </span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="colum">
+                <span class="st-label"
+                  >Max
+                  <h4 class="float-right st-value">{{ Max }}</h4>
+                </span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="colum">
+                <span class="st-label"
+                  >Sum
+                  <h4 class="float-right st-value">{{ Sum }}</h4>
+                </span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="colum">
+                <span class="st-label"
+                  >Product
+                  <h4 class="float-right st-value">{{ Product }}</h4>
+                </span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="colum">
+                <span class="st-label"
+                  >Harmonic Mean
+                  <h4 class="float-right st-value">{{ HarmonicMean }}</h4>
+                </span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="colum">
+                <span class="st-label"
+                  >Geometric Mean
+                  <h4 class="float-right st-value">{{ GeometricMean }}</h4>
+                </span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="colum">
+                <span class="st-label"
+                  >Root Mean Square
+                  <h4 class="float-right st-value">{{ RootMeanSquare }}</h4>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    mat-raised-button
+    (click)="openBottomSheet()"
+    class="bottom-sheet-json"
+  >
+    Your JSON
+  </button>
+</div>

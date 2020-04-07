@@ -9,6 +9,7 @@ import { LineuiComponent } from "./lineui/lineui.component";
 import { DoughnutuiComponent } from "./doughnutui/doughnutui.component";
 import { TreeuiComponent } from "./treeui/treeui.component";
 import { PieuiComponent } from "./pieui/pieui.component";
+import { StatisticsuiComponent } from "./statisticsui/statisticsui.component";
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "table", component: TableuiComponent },
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: "bar", component: BaruiComponent },
   { path: "line", component: LineuiComponent },
   { path: "doughnut", component: DoughnutuiComponent },
-  { path: "tree", component: TreeuiComponent }
+  { path: "tree", component: TreeuiComponent },
+  { path: "statistics", component: StatisticsuiComponent }
 ];
 
 @NgModule({

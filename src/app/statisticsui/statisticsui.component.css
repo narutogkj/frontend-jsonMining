@@ -1,0 +1,53 @@
+.st-label {
+  background-color: #d9534f;
+  border-radius: 3px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.st-value {
+  color: black;
+}
+.colum {
+  margin-right: 10px;
+  border-right: 4px solid #d9534f;
+  background-color: lightyellow;
+}
+.chart-card {
+  height: 85vh;
+  margin-right: 10px;
+}
+
+.chart-heading {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.waraper {
+  margin-top: -5px;
+}
+
+@media only screen and (min-width: 600px) {
+  .bottom-sheet-json {
+    display: none;
+  }
+  .colum {
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .waraper {
+    overflow-x: hidden;
+  }
+  .rawjson {
+    display: none;
+  }
+  .bottom-sheet-json {
+    position: fixed;
+    z-index: 999;
+    margin-top: -10%;
+    margin-left: 30%;
+    background-color: #292b2c;
+    color: #fff;
+  }
+}
