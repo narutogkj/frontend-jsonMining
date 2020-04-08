@@ -1,0 +1,27 @@
+<div class="waraper">
+  <div class="row">
+    <div class="col-sm-3">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-sm-7">
+      <div class="chart-card">
+        <h3 class="chart-heading">Relational Table:</h3>
+        <hr />
+        <div class="tb">
+          <div class="rounded table-responsive" id="td"></div>
+        </div>
+      </div>
+      <app-infobox></app-infobox>
+    </div>
+    <div class="col-sm-2">
+      <app-rawjson></app-rawjson>
+    </div>
+  </div>
+  <button
+    mat-raised-button
+    (click)="openBottomSheet()"
+    class="bottom-sheet-json"
+  >
+    Your JSON
+  </button>
+</div>

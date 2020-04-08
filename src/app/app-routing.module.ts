@@ -10,6 +10,9 @@ import { DoughnutuiComponent } from "./doughnutui/doughnutui.component";
 import { TreeuiComponent } from "./treeui/treeui.component";
 import { PieuiComponent } from "./pieui/pieui.component";
 import { StatisticsuiComponent } from "./statisticsui/statisticsui.component";
+import { CentraltendencyComponent } from "./centraltendency/centraltendency.component";
+import { DispersionComponent } from "./dispersion/dispersion.component";
+import { DescriptiveComponent } from "./descriptive/descriptive.component";
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "table", component: TableuiComponent },
@@ -19,11 +22,14 @@ const routes: Routes = [
   { path: "line", component: LineuiComponent },
   { path: "doughnut", component: DoughnutuiComponent },
   { path: "tree", component: TreeuiComponent },
-  { path: "statistics", component: StatisticsuiComponent }
+  { path: "statistics", component: StatisticsuiComponent },
+  { path: "centraltendency", component: CentraltendencyComponent },
+  { path: "descriptive", component: DescriptiveComponent },
+  { path: "dispersion", component: DispersionComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

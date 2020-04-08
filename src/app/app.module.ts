@@ -34,6 +34,9 @@ import { BootomSheetComponent } from "./bootom-sheet/bootom-sheet.component";
 import { StatisticsuiComponent } from './statisticsui/statisticsui.component';
 import { InfoboxComponent } from './infobox/infobox.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { CentraltendencyComponent } from './centraltendency/centraltendency.component';
+import { DispersionComponent } from './dispersion/dispersion.component';
+import { DescriptiveComponent } from './descriptive/descriptive.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +55,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     BootomSheetComponent,
     StatisticsuiComponent,
     InfoboxComponent,
-    SidebarComponent
+    SidebarComponent,
+    CentraltendencyComponent,
+    DispersionComponent,
+    DescriptiveComponent
   ],
   entryComponents: [DialogComponent, BootomSheetComponent],
   imports: [
