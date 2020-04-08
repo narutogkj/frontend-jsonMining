@@ -32,6 +32,8 @@ import { HeaderComponent } from "./header/header.component";
 import { PieuiComponent } from "./pieui/pieui.component";
 import { BootomSheetComponent } from "./bootom-sheet/bootom-sheet.component";
 import { StatisticsuiComponent } from './statisticsui/statisticsui.component';
+import { InfoboxComponent } from './infobox/infobox.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +50,9 @@ import { StatisticsuiComponent } from './statisticsui/statisticsui.component';
     HeaderComponent,
     PieuiComponent,
     BootomSheetComponent,
-    StatisticsuiComponent
+    StatisticsuiComponent,
+    InfoboxComponent,
+    SidebarComponent
   ],
   entryComponents: [DialogComponent, BootomSheetComponent],
   imports: [

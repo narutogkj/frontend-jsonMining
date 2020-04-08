@@ -1,9 +1,10 @@
 <div class="header-bar">
-  <div class="file-upload-btn float-right btn-primary">
+  <div class="file-upload-btn float-right">
     <img
       src="../assets/cloud-upload-alt-solid.svg"
       alt="file-upload"
       class="file-upload-svg"
+      (click)="apiCallFile()"
     />
   </div>
   <a routerLink="/"

@@ -1,0 +1,5 @@
+.sidebar {
+  margin-left: -10px;
+  height: 92vh;
+  overflow: auto;
+}

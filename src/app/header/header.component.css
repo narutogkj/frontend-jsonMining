@@ -35,18 +35,19 @@ svg {
   font-size: 20px;
 }
 .file-upload-btn {
-  width: 30px;
-  height: 80%;
-  margin-top: 5px;
+  width: 40px;
+  height: 90%;
+
+  margin-top: 12px;
   margin-right: 5%;
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 1px 6px 3px rgba(41, 43, 44, 0.5);
-  -moz-box-shadow: 0px 1px 6px 3px rgba(41, 43, 44, 0.5);
-  box-shadow: 0px 1px 6px 3px rgba(41, 43, 44, 0.5);
 }
 .file-upload-svg {
   background-color: #fff;
   color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 1px 6px 3px rgba(41, 43, 44, 0.5);
+  -moz-box-shadow: 0px 1px 6px 3px rgba(41, 43, 44, 0.5);
+  box-shadow: 0px 1px 6px 3px rgba(41, 43, 44, 0.5);
 }
 @media only screen and (max-width: 600px) {
   .header-bar {
