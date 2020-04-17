@@ -1,5 +1,6 @@
 .card {
   margin-left: -30px;
+  height: 92vh;
 }
 
 /* .card-body {
@@ -8,7 +9,7 @@
   box-shadow: inset 0px 0px 10px 0px rgba(128, 128, 128, 1);
 } */
 .card-header {
-  height: 50px;
+  height: 8vh;
   background-color: #292b2c;
 }
 

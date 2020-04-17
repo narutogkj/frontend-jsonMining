@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { InputvalueService } from "./inputvalue.service";
 
 @Injectable({
-  providedIn: "root"
+  providedIn: "root",
 })
 export class CreatetabelService {
   constructor(private _inputvalueService: InputvalueService) {}
@@ -18,7 +18,7 @@ export class CreatetabelService {
         return data[0].constructor === Array;
       }
     }
-    table += `<table class="table table-bordered">
+    table += `<table class="table table-sm table-bordered">
       <thead class="thead-dark"><tr>`;
 
     if (!isMultiDArray(data)) {

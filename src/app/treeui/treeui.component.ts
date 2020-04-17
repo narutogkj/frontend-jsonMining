@@ -6,10 +6,10 @@ import { MatBottomSheet } from "@angular/material";
 @Component({
   selector: "app-treeui",
   templateUrl: "./treeui.component.html",
-  styleUrls: ["./treeui.component.css"]
+  styleUrls: ["./treeui.component.css"],
 })
 export class TreeuiComponent implements OnInit {
-  private value: any;
+  public value: any;
   constructor(
     private _inputvalue: InputvalueService,
     private _bottomSheet: MatBottomSheet

@@ -6,6 +6,15 @@ import { Injectable } from "@angular/core";
 export class InputvalueService {
   private value: any = [
     {
+      Eating: "35",
+      Drinking: "59",
+      Sleeping: "50",
+      Designing: "31",
+      Coding: "55",
+      Cycling: "52",
+      Running: "49",
+    },
+    {
       Eating: "65",
       Drinking: "59",
       Sleeping: "90",

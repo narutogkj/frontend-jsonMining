@@ -11,33 +11,63 @@ export class CentraltendencyComponent implements OnInit {
   private value: any;
   public jsondata: any;
   public result = [];
-  public Mean: any;
-  public Mode: any;
-  public Median: any;
+  public resultArray = [];
+  public MeanRow = [];
+  public ModeRow = [];
+  public MedianRow = [];
+  public ctColValues;
   constructor(private _inputValue: InputvalueService) {
     if (this._inputValue.getValue()) {
       this.value = this._inputValue.getValue();
     }
     this.jsondata = this._inputValue.getData(this.value);
     //Convert string to integer(array elements)
-    for (var i = 0; i < this.jsondata[0].length; i++)
-      this.result.push(+this.jsondata[0][i]);
+    for (var i = 0; i < this.jsondata.length; i++) {
+      for (var j = 0; j < this.jsondata[i].length; j++) {
+        this.result.push(+this.jsondata[i][j]);
+      }
+      this.resultArray.push(this.result);
+      this.result = [];
+    }
+
     try {
-      this.Mean = ss.mean(this.result).toFixed(2);
-      this.Mode = ss.mode(this.result).toFixed(2);
-      this.Median = ss.median(this.result).toFixed(2);
+      for (var i = 0; i < this.jsondata.length; i++) {
+        this.MeanRow[i] = ss.mean(this.resultArray[i]).toFixed(2);
+        this.ModeRow[i] = ss.mode(this.resultArray[i]).toFixed(2);
+        this.MedianRow[i] = ss.median(this.resultArray[i]).toFixed(2);
+      }
     } catch (error) {
       console.log("An error accoured");
     }
   }
 
   ngOnInit() {
+    this.ctColValues = this.centralTendencyColValues(this.resultArray);
     this.createCTTabel(
       this._inputValue.getLabel(this.value),
       this._inputValue.getData(this.value),
       this._inputValue.isJsonArray(this.value)
     );
   }
+
+  public centralTendencyColValues(resultArray) {
+    let j = 0;
+    let tempArrayCT = [];
+    const meanValue = [];
+    const modeValue = [];
+    const medianValue = [];
+    for (let x = 0; x < resultArray[0].length; x++) {
+      for (let i = 0; i < resultArray.length; i++) {
+        tempArrayCT.push(resultArray[i][x]);
+      }
+      meanValue.push(ss.mean(tempArrayCT).toFixed(2));
+      modeValue.push(ss.mode(tempArrayCT).toFixed(2));
+      medianValue.push(ss.median(tempArrayCT).toFixed(2));
+      tempArrayCT = [];
+    }
+    return { meanValue, modeValue, medianValue };
+  }
+
   public createCTTabel(label, data, isJsonArray: boolean) {
     let table = "";
     const rows = data.length;
@@ -70,9 +100,9 @@ export class CentraltendencyComponent implements OnInit {
       for (let i = 0; i < cols; i++) {
         table += `<th scope="col">${label[i]}</th>`;
       }
-      table += `<th scope="col">Mean</th>`;
-      table += `<th scope="col">Median</th>`;
-      table += `<th scope="col">Mode</th>`;
+      table += `<th scope="col" class="bg-danger">Mean</th>`;
+      table += `<th scope="col" class="bg-danger">Median</th>`;
+      table += `<th scope="col" class="bg-danger">Mode</th>`;
       table += `</tr>
       </thead>
       <tbody>`;
@@ -83,24 +113,24 @@ export class CentraltendencyComponent implements OnInit {
         for (let c = 0; c < cols; c++) {
           table += "<td>" + data[i][c] + "</td>";
         }
-        table += `<td>${this.Mean}</td>`;
-        table += `<td>${this.Median}</td>`;
-        table += `<td>${this.Mode}</td>`;
+        table += `<td>${this.MeanRow[i]}</td>`;
+        table += `<td>${this.MedianRow[i]}</td>`;
+        table += `<td>${this.ModeRow[i]}</td>`;
         table += "</tr>";
       }
-      table += `<tr><td>Mean</td>`;
+      table += `<tr><td class="bg-danger text-white">Mean</td>`;
       for (let c = 0; c < cols; c++) {
-        table += `<td>1</td>`;
+        table += `<td>${this.ctColValues.meanValue[c]}</td>`;
       }
       table += "</tr>";
-      table += `<tr><td>Median</td>`;
+      table += `<tr><td class="bg-danger text-white">Median</td>`;
       for (let c = 0; c < cols; c++) {
-        table += `<td>1</td>`;
+        table += `<td>${this.ctColValues.medianValue[c]}</td>`;
       }
       table += "</tr>";
-      table += `<tr><td>Mode</td>`;
+      table += `<tr><td class="bg-danger text-white">Mode</td>`;
       for (let c = 0; c < cols; c++) {
-        table += `<td>1</td>`;
+        table += `<td>${this.ctColValues.modeValue[c]}</td>`;
       }
       table += "</tr>";
     }

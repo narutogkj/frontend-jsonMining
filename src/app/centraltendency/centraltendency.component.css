@@ -4,10 +4,10 @@
 }
 
 .chart-card {
-  height: 85vh;
+  height: 76vh;
   margin-right: 10px;
+  overflow: auto;
 }
-
 .chart-heading {
   margin-top: 10px;
   margin-bottom: 10px;

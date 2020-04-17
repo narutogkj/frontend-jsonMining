@@ -1,8 +1,8 @@
 .chart-card {
-  height: 85vh;
+  height: 76vh;
   margin-right: 10px;
+  overflow: auto;
 }
-
 .waraper {
   margin-top: -5px;
 }
